@@ -1,0 +1,70 @@
+.media-partners {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 30px;
+  text-align: center;
+
+  h3 {
+    font-family: 'Gotham Narrow Bold';
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .partners {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .partner {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      margin: 10px 20px;
+
+      img {
+        transition: all linear 0.2s;
+        width: 100%;
+      }
+
+      .default {
+        display: none;
+        opacity: 0;
+      }
+
+      .bw {
+        display: block;
+        opacity: 1;
+      }
+
+      &:hover {
+        .default {
+          display: block;
+          opacity: 1;
+        }
+
+        .bw {
+          display: none;
+          opacity: 0;
+        }
+      }
+    }
+
+    .partner-cbc {
+      height: 40px;
+      width: 219px;
+    }
+
+    .partner-actualite {
+      height: 40px;
+      width: 131px;
+    }
+
+    .partner-walrus {
+      height: 40px;
+      width: 237px;
+    }
+
+  }
+}

@@ -36,9 +36,29 @@ class Book extends Component {
         {book.place === 0 && <span className="book-winner">&#9733; <strong>Winner</strong> &#9733;</span>}
         <span className="book-image" style={{ backgroundImage: `url(${baseUrl}${category}/${book.imageSrc})`}} />
         <h6>{book.title}</h6>
-        <span className="book-author">{book.author}</span>
-        <span className="book-pub-dis">{book.publisher} - {book.distributor}</span>
+        {book.category === 'translation' ?
+          <span className="book-translator">{book.author}</span>
+        :
+          <span className="book-author">{book.author}</span>
+        }
+
+        <span className="book-pub-dis">{book.publisher} - {book.distributor === book.publisher ? 'distributed by the publisher' : book.distributor}</span>
         <span className="book-isbn">{book.isbn}</span>
+
+        {book.category === 'translation' &&
+          <div className="book-original">
+            <span className="book-title">{book.original.title}</span>
+            <span className="book-author">{book.original.author}</span>
+            <span className="book-pub-dis">{book.original.publisher}</span>
+          </div>
+        }
+
+        {book.sypnosis !== '' &&
+          <div className="book-sypnosis">
+            <h6>Sypnosis</h6>
+            <p>{book.sypnosis}</p>
+          </div>
+        }
       </div>
     );
 

@@ -1,0 +1,43 @@
+.main-banner {
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 360px;
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    height: 360px;
+    max-width: 1200px;
+    padding-top: 40px;
+
+    h2 {
+      color: #009ADD;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .arrow {
+      align-items: center;
+      background-color: #009ADD;
+      border-radius: 500px;
+      color: #fff;
+      display: flex;
+      font-size: 24px;
+      height: 54px;
+      justify-content: center;
+      margin-top: 0;
+      transition: all linear 0.2s;
+      width: 54px;
+
+      &:hover {
+        background-color: rgba(0, 154, 221, 0.75);
+        color: #fff;
+        margin-top: 10px;
+      }
+    }
+  }
+}

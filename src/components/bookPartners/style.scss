@@ -1,0 +1,97 @@
+.book-partners {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 30px;
+  text-align: center;
+
+  h3 {
+    font-size: 43px;
+  }
+
+  .partners {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .partner {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      margin: 10px 15px;
+
+      img {
+        transition: all linear 0.2s;
+        width: 100%;
+      }
+
+      .default {
+        display: none;
+        opacity: 0;
+      }
+
+      .bw {
+        display: block;
+        opacity: 1;
+      }
+
+      &:hover {
+        .default {
+          display: block;
+          opacity: 1;
+        }
+
+        .bw {
+          display: none;
+          opacity: 0;
+        }
+      }
+    }
+
+    .partner-kobo {
+      height: 33px;
+      width: 174px;
+    }
+
+    .partner-indigo {
+      height: 60px;
+      width: 90px;
+    }
+
+    .partner-cela {
+      height: 103px;
+      width: 174px;
+    }
+
+    .partner-nnels {
+      height: 25px;
+      width: 174px;
+    }
+
+    .partner-nrc {
+      height: 52px;
+      width: 174px;
+    }
+
+    .partner-culc {
+      height: 50px;
+      width: 320px;
+    }
+
+    .partner-leslib {
+      height: 70px;
+      width: 90px;
+    }
+
+    .partner-pb {
+      height: 60px;
+      width: 100px;
+    }
+
+    .partner-soleil {
+      height: 90px;
+      width: 116px;
+    }
+  }
+}

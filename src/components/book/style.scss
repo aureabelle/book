@@ -6,7 +6,13 @@
 .book-details img {
   height: 100%;
   object-fit: cover;
+  opacity: 1;
+  transition: all linear 0.2s;
   width: 100%;
+
+  &:hover {
+    opacity: 0.85;
+  }
 }
 
 .book-info {
@@ -14,10 +20,90 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 1px solid #dbdbdb;
     display: block;
     height: 385px;
+    margin-bottom: 15px;
     width: 100%;
   }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .book-translator,
+  .book-author,
+  .book-pub-dis,
+  .book-isbn {
+    display: block;
+  }
+
+  .book-pub-dis,
+  .book-isbn {
+    font-size: 12px;
+  }
+
+  .book-translator {
+    margin-bottom: 5px;
+
+    &:before {
+      content: 'Translated by ';
+    }
+  }
+
+
+  .book-author {
+    margin-bottom: 5px;
+
+    &:before {
+      content: 'By ';
+    }
+  }
+
+  .book-isbn {
+    &:before {
+      content: 'ISBN ';
+    }
+  }
+
+  .book-sypnosis {
+    border-top: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+
+  .book-original {
+    border-top: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 15px;
+
+    .book-title,
+    .book-author,
+    .book-pub-dis {
+      font-size: 12px;
+    }
+
+    .book-title {
+      &:before {
+        content: 'Translation of ';
+      }
+    }
+
+    .book-author {
+      &:before {
+        content: 'By ';
+      }
+    }
+
+    .book-pub-dis {
+      &:before {
+        content: 'Published by ';
+      }
+    }
+  }
+
 }
 
 .book-trigger {

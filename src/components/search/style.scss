@@ -11,6 +11,8 @@
 }
 
 .book-category {
+  margin-bottom: 20px;
+
   h3 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -31,11 +33,17 @@
 
 @media only screen and (min-width: 992px) {
   .search {
-    margin: 0 auto;
+    margin: 0 20px;
     max-width: 1200px;
   }
 
   .book-list {
     flex-wrap: initial;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .search {
+    margin: 0 auto;
   }
 }

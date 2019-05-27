@@ -25,7 +25,7 @@ module.exports = {
           }
         ]
       },
-      {
+      /*{
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
@@ -35,7 +35,7 @@ module.exports = {
             }
           }
         ]
-      },
+      },*/
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
@@ -45,20 +45,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               outputPath: 'assets',
               name: '[path][name].[ext]',
+              limit: 100000
             },
           },
         ],
       },
 
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
         use: [
           {
             loader: 'url-loader',
