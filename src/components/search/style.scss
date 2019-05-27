@@ -1,0 +1,41 @@
+.search {
+  margin: 0 10px;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.books {
+  margin-top: 20px;
+}
+
+.book-category {
+  h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 576px) {
+  .book-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .search {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .book-list {
+    flex-wrap: initial;
+  }
+}

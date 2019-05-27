@@ -1,0 +1,168 @@
+.book {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.book-details img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.book-info {
+  .book-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 385px;
+    width: 100%;
+  }
+}
+
+.book-trigger {
+  background-color: rgba(0, 154, 221, 0.8);
+  // border: 3px solid #fff;
+  border-radius: 5000px;
+  color: #fff;
+  display: block;
+  font-family: 'Gotham Narrow Bold';
+  font-size: 32px;
+  height: 32px;
+  left: 50%;
+  line-height: 1;
+  margin-left: -16px;
+  margin-top: -16px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 32px;
+}
+
+.book-placement-0 {
+  order: 1;
+}
+
+.book-placement-1 {
+  order: 2;
+}
+
+.book-placement-2 {
+  order: 3;
+}
+
+.book-placement-3 {
+  order: 4;
+}
+
+.book-placement-4 {
+  order: 5;
+}
+
+.book-committee {
+  background-color: #009ADD;
+  color: #fff;
+  order: 6;
+}
+
+.book-committee {
+  padding: 20px;
+
+  h5 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  ul {
+    font-size: 14px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.book-winner {
+  align-items: center;
+  background-color: #F73D4E;
+  color: #fff;
+  display: flex;
+  font-family: 'Gotham Narrow Bold';
+  font-size: 12px;
+  height: 30px;
+  left: 0;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 125px;
+
+  strong {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 5px;
+    margin-top: 4px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .book {
+    margin: 0 10px;
+    margin-bottom: 20px;
+    width: 48%;
+  }
+
+  .book:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .book:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .book {
+    width: 31%;
+  }
+
+  .book:nth-child(odd),
+  .book:nth-child(even) {
+    margin-left: initial;
+    margin-right: initial;
+  }
+
+  .book:nth-child(3n+2) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .book {
+    min-width: 15%;
+    margin: 0 10px;
+    max-width: 200px;
+  }
+
+  .book:nth-child(odd),
+  .book:nth-child(even) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .book:nth-child(3n+2) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .book:first-child {
+    margin-left: initial;
+  }
+
+  .book:last-child {
+    margin-right: initial;
+  }
+}

@@ -1,0 +1,50 @@
+/*
+  $xs: <576px
+  $s: ≥576px
+  $m: ≥768px
+  $l: ≥992px
+  $xl: ≥1200px
+  $xxl: ≥1600px
+*/
+
+$s: 576px;
+$m: 768px;
+$l: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+
+@mixin mobile {
+  @media only screen and (max-width: $s) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $s) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $m) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media only screen and (min-width: $l) {
+    @content;
+  }
+}
+
+@mixin xlarge-desktop {
+  @media only screen and (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin xxlarge-desktop {
+  @media only screen and (min-width: $xxl) {
+    @content;
+  }
+}
