@@ -49,7 +49,7 @@ class Search extends Component {
 
 
 
-    const baseUrl = lang === 'en' ? '/assets/src/images/books/en/' : '/assets/src/images/books/fr/';
+    const baseUrl = lang === 'en' ? 'assets/src/images/books/en/' : 'assets/src/images/books/fr/';
 
     const baseWidth = '160';
     const baseHeight = '232';
