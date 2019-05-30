@@ -28,12 +28,27 @@ class Book extends Component {
 
   render() {
     const { book, baseUrl, baseWidth, baseHeight, category } = this.props;
-
     const { visible } = this.state;
+
+    const getPlace = () => {
+      if (book.place === 1) {
+        return 'st';
+      } else if (book.place === 2) {
+        return 'nd';
+      } else if (book.place === 3) {
+        return 'rd';
+      } else {
+        return 'th';
+      }
+    };
 
     const content = (
       <div className="book-info">
-        {book.place === 0 && <span className="book-winner">&#9733; <strong>Winner</strong> &#9733;</span>}
+        {book.place === 0 ?
+          <span className="book-winner">&#9733; <strong>Winner</strong> &#9733;</span>
+        :
+          <span className="book-runnerup">&#8226; <strong>{book.place}<sup>{getPlace()}</sup> Runner-up</strong> &#8226;</span>
+        }
         <span className="book-image" style={{ backgroundImage: `url(${baseUrl}${category}/${book.imageSrc})`}} />
         <h6>{book.title}</h6>
         {book.category === 'translation' ?
@@ -67,7 +82,7 @@ class Book extends Component {
         <div className="book-details">
           <img src={`${baseUrl}${category}/${book.imageSrc}`} height={baseHeight} width={baseWidth} alt={book.title} />
           {book.place === 0 && <span className="book-winner">&#9733; <strong>Winner</strong> &#9733;</span>}
-          <a className="book-trigger" onClick={this.showDrawer}>
+          <a className="book-trigger" onClick={this.showDrawer} title="Show details">
             <Icon type="plus-circle" />
           </a>
         </div>

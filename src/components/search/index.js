@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import data from '../../data';
 import Filter from '../filter';
 import Book from '../book';
+import ShareThis from '../shareThis';
 import './style.scss';
 
 class Search extends Component {
@@ -263,6 +264,8 @@ class Search extends Component {
           </div>
         }
         </div>
+
+        <ShareThis />
       </div>
     );
   }
